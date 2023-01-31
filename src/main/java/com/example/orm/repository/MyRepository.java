@@ -3,6 +3,7 @@ package com.example.orm.repository;
 import com.example.orm.entity.Person;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
+import org.apache.catalina.valves.rewrite.InternalRewriteMap;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -16,8 +17,8 @@ public class MyRepository {
         this.entityManager = entityManager;
     }*/
     public List<Person> getPersonsByCity(String city){
-        return entityManager.createQuery("SELECT p FROM Person p WHERE LOWER(p.cityOfLiving) = :city")
-                .setParameter("city", city).getResultList();
+        return entityManager.createQuery("SELECT p FROM Person p WHERE LOWER(p.cityOfLiving)= :city")
+                .setParameter("city", city.compareToIgnoreCase(city)).getResultList();
     }
 }
 

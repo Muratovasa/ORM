@@ -18,8 +18,8 @@ import lombok.NoArgsConstructor;
 public class Person {
     @EmbeddedId
     private PrimaryKeyOfPeople human;
-    @Column(name = "phoneNumber", nullable = false)
+    @Column(name = "phone_number", nullable = false)
     private String phoneNumber;
-    @Column(name = "cityOfLiving", nullable = false)
+    @Column(name = "city_of_living", nullable = false)
     private String cityOfLiving;
 }

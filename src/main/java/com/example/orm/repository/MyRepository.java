@@ -17,8 +17,8 @@ public class MyRepository {
         this.entityManager = entityManager;
     }*/
     public List<Person> getPersonsByCity(String city){
-        return entityManager.createQuery("SELECT p FROM Person p WHERE LOWER(p.cityOfLiving)= :city")
-                .setParameter("city", city.toLowerCase()).getResultList();
+        return entityManager.createQuery("SELECT p FROM Person p WHERE LOWER(p.cityOfLiving)= LOWER( :city)")
+                .setParameter("city", city).getResultList();
     }
 }
 

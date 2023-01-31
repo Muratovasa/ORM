@@ -1,9 +1,9 @@
-package service;
+package com.example.orm.service;
 
-import entity.Person;
+import com.example.orm.entity.Person;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
-import repository.MyRepository;
+import com.example.orm.repository.MyRepository;
 
 import java.util.List;
 

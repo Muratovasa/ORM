@@ -1,4 +1,4 @@
-package entity;
+package com.example.orm.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.EmbeddedId;
@@ -18,8 +18,8 @@ import lombok.NoArgsConstructor;
 public class Person {
     @EmbeddedId
     private PrimaryKeyOfPeople human;
-    @Column(name = "phone_number", nullable = false)
-    private String phone_number;
-    @Column(name = "city_of_living", nullable = false)
-    private String city_of_living;
+    @Column(name = "phoneNumber", nullable = false)
+    private String phoneNumber;
+    @Column(name = "cityOfLiving", nullable = false)
+    private String cityOfLiving;
 }
